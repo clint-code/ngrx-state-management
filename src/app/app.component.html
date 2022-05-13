@@ -1,0 +1,27 @@
+<div style="text-align:center">
+
+  <h1>{{ title }}</h1>
+
+</div>
+
+<section class="container">
+
+  <div class="row">
+    <p>Total Number of Apples in Store: {{ (applesInStore$ | async)?.applesCount }}</p>
+    <button (click)="addApples(1)">Add an Apple</button>
+    <button (click)="removeApples(1)">Remove an Apple</button>
+    <button (click)="removeAllApples()">Remove All Apples</button>
+    
+  </div>
+
+  <div class="row">
+    <p>Total Number of Bananas in Store: {{ (bananasInStore$ | async)?.bananasCount }}</p>
+    <button (click)="addBananas(1)">Add a Banana</button>
+    <button (click)="removeBanana(1)">Remove a Banana</button>
+    <button (click)="removeAllBananas()">Remove All Bananas</button>
+  
+  </div>
+
+</section>
+
+<router-outlet></router-outlet>
